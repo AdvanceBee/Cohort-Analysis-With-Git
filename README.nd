@@ -1,113 +1,101 @@
-# 📊 Cohort Analysis & Customer Retention Project
+Cohort Analysis & Customer Retention Project
 
 This project performs a full lifecycle customer analytics pipeline using e-commerce transaction data. It includes cohort analysis, churn modeling, RFM segmentation, customer lifetime value forecasting (BG/NBD), machine learning for churn prediction, and actionable recommendations.
 
 ---
-
-## 🚀 Project Objectives
-- Calculate and analyze customer **retention rates** over time
-- Segment customers using **RFM features** and clustering (K-Means)
-- Predict **future transactions** using the **BG/NBD** model
-- Build a **churn prediction model** using Random Forest
-- Evaluate models with **MAE and RMSE**
-- Deliver **data-driven business recommendations**
+Project Objectives
+- Calculate and analyze customer retention rates over time
+- Segment customers using RFM features and clustering (K-Means)
+- Predict future transactions using the BG/NBD model
+- Build a churn prediction model using Random Forest
+- Evaluate models with MAE and RMSE
+- Deliver data-driven business recommendations
 
 ---
-
-## 📁 Dataset Description
+Dataset Description
 The dataset includes e-commerce transactions with the following key fields:
-- `InvoiceNo`, `StockCode`, `Description`, `Quantity`
-- `InvoiceDate`, `UnitPrice`, `CustomerID`, `Country`
+- InvoiceNo, StockCode, Description, Quantity
+- InvoiceDate, UnitPrice, CustomerID, Country
 
 A new column `TotalPrice` was created = `Quantity × UnitPrice`
 
 ---
+Cohort Analysis
+- Customers grouped by first purchase month (CohortMonth)
+- Calculated CohortIndex to track retention monthly
+- Built cohort retention matrix and plotted retention heatmaps
 
-## 📅 Cohort Analysis
-- Customers grouped by **first purchase month** (`CohortMonth`)
-- Calculated **CohortIndex** to track retention monthly
-- Built **cohort retention matrix** and plotted **retention heatmaps**
-
-### 🔍 Insights:
+Insights:
 - Most customers churn after 1 month
 - Retention is slightly improving in recent cohorts
 
 ---
+Churn Analysis
+- Defined churn as no purchase in the past 90 days
+- Visualized churn timing with a line chart by CohortIndex
 
-## 📉 Churn Analysis
-- Defined churn as **no purchase in the past 90 days**
-- Visualized churn timing with a **line chart by CohortIndex**
-
-### 🔍 Insights:
-- Churn peaks between **Month 1 and 2**
+Insights:
+- Churn peaks between Month 1 and 2
 - Majority of customers drop off within first 60 days
 
 ---
-
-## 💰 RFM Feature Engineering
-- **Recency**: Days since last purchase
-- **Frequency**: Unique invoice counts
-- **Monetary**: Total spend
-- Features were scaled using `StandardScaler`
+RFM Feature Engineering
+- Recency: Days since last purchase
+- Frequency: Unique invoice counts
+- Monetary: Total spend
+- Features were scaled using StandardScaler
 
 ---
 
-## 🔄 K-Means Clustering
-- Customers segmented into **4 clusters** based on RFM
+K-Means Clustering
+- Customers segmented into 4 clusters based on RFM
 - Profiled clusters to identify VIPs, loyalists, at-risk, and new customers
 
 ---
-
-## 🔮 Predictive Modeling: BG/NBD
-- Used `lifetimes` to forecast future purchases
-- Identified high-value customers based on **expected orders in 30 days**
-- Visualized **predicted purchase distribution**
+Predictive Modeling: BG/NBD
+- Used lifetimes to forecast future purchases
+- Identified high-value customers based on expected orders in 30 days
+- Visualized **predicted purchase distribution
 
 ---
 
-## 🌲 Churn Prediction: Random Forest
+Churn Prediction: Random Forest
 - Trained model to classify churn using RFM features
-- Achieved **100% accuracy**, **0.0 MAE**, and **0.0 RMSE**
+- Achieved 100% accuracy, 0.0 MAE, and 0.0 RMSE
 - Visualized **feature importance** (Recency was most important)
 
 ---
 
-## 📘 Business Recommendations
+Business Recommendations
+High-Value Loyal Customers
+- Offer exclusive perks, early access, loyalty programs
 
-### 💎 High-Value Loyal Customers
-- Offer **exclusive perks**, early access, loyalty programs
+Potential Loyalists
+- Use follow-up emails, reward next purchases with small discounts
 
-### 🔁 Potential Loyalists
-- Use **follow-up emails**, reward next purchases with small discounts
+At-Risk / Churning
+- Launch win-back campaigns, collect exit feedback
+ New / Occasional
+- Create onboarding series, upsell gently, use social proof
 
-### 🚨 At-Risk / Churning
-- Launch **win-back campaigns**, collect exit feedback
-
-### 🌱 New / Occasional
-- Create **onboarding series**, upsell gently, use social proof
-
-### 📈 Predictive Highlights
-- Use BG/NBD scores + churn risk to **prioritize retention**
-- Feed model outputs into CRM for **automated marketing**
+ Predictive Highlights
+- Use BG/NBD scores + churn risk to prioritize retention
+- Feed model outputs into CRM for automated marketing
 
 ---
-
-## 🧠 Tools & Libraries
+Tools & Libraries
 - Python, Pandas, Matplotlib, Seaborn, scikit-learn, lifetimes
 - Jupyter Notebook + Git for version control
 
 ---
-
-## ✅ Status: Project Complete
-
-📌 Next Steps:
+Status: Project Complete
+Next Steps:
 - Extend churn model with additional behavioral features
 - Deploy insights into CRM or email marketing tools
 - Continue pushing updates and experiments to GitHub
 
 ---
-
-### 👤 Author: AdvanceBee
+Author: Bukola Korede-Kolejo
 > Impacting lives positively through data
 
 GitHub Repo: [Cohort-Analysis-With-Git](https://github.com/AdvanceBee/Cohort-Analysis-With-Git)
